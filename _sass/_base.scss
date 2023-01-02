@@ -8,6 +8,15 @@ p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
 }
 
+p{
+  font-size: 0.92rem;
+}
+ul{
+  font-size: 0.92rem;
+}
+strong {
+  font-weight: bold;
+}
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -33,7 +42,7 @@ a, table.table a {
 }
 
 figure, img {
-  max-width: 90vw;
+  max-width: 120vw;
 }
 
 blockquote {
@@ -42,6 +51,53 @@ blockquote {
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   font-size: 1.2rem;
+}
+
+// Projects
+.custom_projects {
+  text-align: left;
+  line-height: 1.25rem;
+  br {
+    line-height: 100%;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 1.6rem;
+  }
+  h6{
+    font-size: 1rem;
+  }
+  p{
+    font-size: 0.92rem;
+  }
+  p1{
+    font-size: 0.87rem;
+  }
+}
+
+// Misc
+.misc {
+  line-height: 1.25rem;
+  br {
+    line-height: 100%;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 1.6rem;
+  }
+  h6{
+    font-size: 1rem;
+  }
+  p{
+    font-size: 0.92rem;
+  }
+  p1{
+    font-size: 0.87rem;
+  }
 }
 
 // Math
@@ -253,7 +309,7 @@ blockquote {
 .social {
   text-align: center;
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2rem;
     a {
       i::before {
         color: var(--global-text-color);
@@ -414,7 +470,6 @@ footer.sticky-bottom {
     text-decoration: none;
   }
 }
-
 
 // Projects
 
