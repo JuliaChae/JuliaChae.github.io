@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>University of Toronto</a>. Autonomous Robotics & Perception, Computer Vision, Machine Learning
+subtitle: <a href='https://www.eecs.mit.edu/'>Massachusetts Institute of Technology</a>. Computer Vision and Machine Learning
 
 profile:
   align: right
