@@ -21,7 +21,7 @@ misc: true
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 # social: true  # includes social icons at the bottom of the page
 ---
-I am a first-year EECS PhD student at [**MIT CSAIL**](https://www.csail.mit.edu/) advised by [**Sara Beery**](https://beerys.github.io/). I am generously supported by the MIT Andrew and Erna Viterbi Graduate Fellowship. 
+I am a EECS PhD student at [**MIT CSAIL**](https://www.csail.mit.edu/) advised by [**Sara Beery**](https://beerys.github.io/). I am generously supported by the MIT Andrew and Erna Viterbi Graduate Fellowship. 
 
 My current project focuses on investigating how **synthetic data** can be used to enhance real-world vision models. More broadly, I am interested in developing robust computer vision algorithms for practical use across various domains. I'm particularly interested in applying this technology to **ecology** and **biodiversity monitoring** - previously, my work has focused on robotics applications.
 
