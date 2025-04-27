@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2025-01-22 07:59:00-0400
 inline: true
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Our paper, [Personalized Representation from Personalized Generation](https://arxiv.org/abs/2412.16156) was accepted to ICLR 2025!

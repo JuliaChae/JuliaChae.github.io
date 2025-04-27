@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024-09-30
 inline: true
 ---
 
-A simple inline announcement.
+Co-Organized 1st ever [CV4E Workshop](https://cv4e.netlify.app/) at ECCV in Milan! 
