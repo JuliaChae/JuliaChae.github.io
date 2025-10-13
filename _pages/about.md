@@ -22,7 +22,7 @@ misc: true
 # social: true  # includes social icons at the bottom of the page
 ---
 
-Hi! I’m a PhD student in EECS at [**MIT CSAIL**](https://www.csail.mit.edu/), advised by [**Sara Beery**](https://beerys.github.io/). My PhD is supported by the NSERC Postgraduate Scholarship and the MIT Generative AI Consortium Grant, and has previously been funded by the Google–MIT Grant and the MIT Viterbi Fellowship.
+Hi! I’m a PhD student in EECS at [**MIT CSAIL**](https://www.csail.mit.edu/), advised by [**Sara Beery**](https://beerys.github.io/). My research is supported by the NSERC Postgraduate Scholarship and the MIT Generative AI Consortium Grant, and has previously been funded by the Google–MIT Grant and the MIT Viterbi Fellowship.
 
 I work on **computer vision** and **multi-modal learning**, and I'm interested in making large AI models more adaptive and human-aligned for specialized, real-world applications. I’m broadly interested in AI systems that support scientific discovery, including applications in ecology and biodiversity monitoring.
 
