@@ -6,7 +6,7 @@ subtitle: <a href='https://www.eecs.mit.edu/'>Massachusetts Institute of Technol
 
 profile:
   align: right
-  image: headshot.jpg
+  image: Julia_headshot2.png
   image_circular: false # crops the image to make it circular
   address: 
 
