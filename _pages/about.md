@@ -21,12 +21,21 @@ misc: true
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 # social: true  # includes social icons at the bottom of the page
 ---
-I am a EECS PhD student at [**MIT CSAIL**](https://www.csail.mit.edu/) advised by [**Sara Beery**](https://beerys.github.io/). My PhD has been generously supported by the NSERC-PGS-D and MIT Andrew and Erna Viterbi Graduate Fellowship. 
 
-My research focuses on bridging **general-purpose** models with **expert-level intelligence**. I am interested in how evolving **domain knowledge** can be integrated into large AI models — through curated __*synthetic data*__, __*targeted self-supervision*__, and __*expert feedback*__ — while preserving their adaptability and generalization. More broadly, I aim to scientifically understand how to overcome real-world data gaps, guide scalable and robust specialization, and design models that, like humans, refine their expertise in alignment with the structure of complex real-world environments. 
+Hi! I’m a PhD student in EECS at [**MIT CSAIL**](https://www.csail.mit.edu/), advised by [**Sara Beery**](https://beerys.github.io/). My PhD is supported by the NSERC Postgraduate Scholarship and the MIT Generative AI Consortium Grant, and has previously been funded by the Google–MIT Grant and the MIT Viterbi Fellowship.
 
-I'm particularly interested in applications to **ecology** and **biodiversity monitoring** - previously, my work has focused on robotics applications.
+I work on **computer vision** and **multi-modal learning**, and I'm interested in making large AI models more adaptive and human-aligned for specialized, real-world applications. I’m broadly interested in AI systems that support scientific discovery, including applications in ecology and biodiversity monitoring.
 
-Prior to my PhD, I received by BASc at the **University of Toronto** in [**Engineering Science**](https://discover.engineering.utoronto.ca/programs/engineering-programs/engineering-science/), majoring in Robotics with a minor in [Machine Intelligence](https://undergrad.engineering.utoronto.ca/academics-registration/minors-certificates/undergraduate-engineering-minors/minor-in-artificial-intelligence/). At UofT, I worked with Prof. [Sanja Fidler](https://www.cs.utoronto.ca/~fidler/) (affiliations: [UofT Machine Learning](https://learning.cs.toronto.edu/), [Vector Institute](https://vectorinstitute.ai/), [NVIDIA](https://nv-tlabs.github.io/)) on **self-supervised representation learning**, and with Prof. [Florian Shkurti](http://www.cs.toronto.edu/~florian/) (affiliations: [Vector Institute](https://vectorinstitute.ai/), [UofT Robotics Institute](https://robotics.utoronto.ca/)), Prof. [Steven Waslander](https://www.trailab.utias.utoronto.ca/stevenwaslander) (affiliations: [UTIAS](https://www.utias.utoronto.ca/), U of T Robotics Institute) on **robot learning and perception**. Please see my CV below for more details. 
+Before MIT, I completed my undergraduate degree in Engineering Science at the [University of Toronto](https://discover.engineering.utoronto.ca/programs/engineering-programs/engineering-science/), where I worked with [Sanja Fidler](https://www.cs.toronto.ca/~fidler/), [Florian Shkurti](http://www.cs.toronto.edu/~florian/), and [Steven Waslander](https://www.trailab.utias.utoronto.ca/stevenwaslander).
 
-If you would like to chat, feel free to reach out to me via one of the contact information below. 
+<!-- Hi! I’m a EECS PhD student at [**MIT CSAIL**](https://www.csail.mit.edu/), advised by [**Sara Beery**](https://beerys.github.io/).  
+My PhD is supported by the **NSERC Postgraduate Scholarship** and the **MIT Generative AI Consortium Grant**, and was previously supported by the **Google–MIT Grant** and the **MIT Viterbi Fellowship**.
+
+My research explores how large, general-purpose AI models can develop *adaptive, human-aligned intelligence*. I focus on integrating evolving **domain knowledge** — through **synthetic data**, **representation learning**, and **expert feedback** — while preserving adaptability and generalization.
+
+I work in **computer vision** and **multi-modal learning**. I'm also interested in applications to **ecology and biodiversity monitoring**, where AI can expand scientific discovery and support conservation efforts.
+
+Before MIT, I completed my undergraduate degree in **Engineering Science** at the [**University of Toronto**](https://discover.engineering.utoronto.ca/programs/engineering-programs/engineering-science/), where I worked with [**Sanja Fidler**](https://www.cs.toronto.ca/~fidler/), [**Florian Shkurti**](http://www.cs.toronto.edu/~florian/), and [**Steven Waslander**](https://www.trailab.utias.utoronto.ca/stevenwaslander).
+
+I’m always happy to connect — whether to discuss research, explore collaborations, or just chat about ideas. -->
+

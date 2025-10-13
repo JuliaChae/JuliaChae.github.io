@@ -2,6 +2,13 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+// Base font size: increase this to scale all rem-based typography across the site.
+// Many components use rem units (for example `h2 { font-size: 1.6rem }`), so
+// changing the root makes the whole site text larger without editing many rules.
+html {
+  font-size: 18px; // default is typically 16px; 18px makes fonts ~12.5% larger
+}
+
 // Typography
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
@@ -189,6 +196,27 @@ blockquote {
       text-decoration: none;
     }
   }
+}
+
+/* News panel: when there are many items, make it taller and scrollable */
+.news-scrollable {
+  max-height: 40vh; /* taller scroll area; adjust as desired */
+  overflow-y: auto;
+  padding-right: 0.5rem; /* keep some breathing room for scrollbar */
+}
+
+/* Add spacing between research interests section and the news section */
+#research_interests {
+  margin-bottom: 2rem; /* space below research interests */
+}
+
+/* Wider date column in news list */
+.news .table .news-date {
+  width: 10rem; /* increase this value to make the date column wider */
+  white-space: nowrap;
+  vertical-align: top;
+  padding-right: 1rem;
+  color: var(--global-text-color-light);
 }
 
 
