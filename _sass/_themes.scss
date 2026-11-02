@@ -2,6 +2,7 @@
   --bg: #F7F7F0;
   --ink: #252823;
   --accent: #365447;
+  --accent-rgb: 54, 84, 71;
   --accent-soft: rgba(54, 84, 71, .25);
   --grid: rgba(54, 84, 71, .09);
   --wash: rgba(54, 84, 71, .12);
@@ -38,8 +39,9 @@ html[data-theme="dark"] {
   --bg: #1D231F;
   --ink: #E7EAE1;
   --accent: #A9CBB5;
+  --accent-rgb: 169, 203, 181;
   --accent-soft: rgba(169, 203, 181, .25);
-  --grid: rgba(169, 203, 181, .07);
+  --grid: rgba(169, 203, 181, .0455);
   --wash: rgba(169, 203, 181, .10);
   color-scheme: dark;
 
