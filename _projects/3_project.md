@@ -1,4 +1,5 @@
 ---
+published: false
 layout: page
 title: project 3
 description: a project that redirects to another website

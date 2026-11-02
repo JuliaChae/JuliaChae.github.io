@@ -1,0 +1,169 @@
+// The gallery is deliberately independent of the publication thumbnail styles.
+#projects {
+  --project-size: 200px;
+
+  .project-gallery-shell {
+    position: relative;
+  }
+
+  .project-gallery-shell::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 28px;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--bg));
+    z-index: 3;
+  }
+
+  .project-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 10px;
+    // Reserve room for the enlarged media without changing the title position.
+    padding: 18px 10px 8px;
+    margin: -18px -10px 0;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .project-tile {
+    flex: 0 0 var(--project-size);
+    min-width: 0;
+    scroll-snap-align: start;
+    position: relative;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .project-media {
+    position: relative;
+    width: var(--project-size);
+    height: var(--project-size);
+    border-radius: 8px;
+    overflow: hidden;
+    isolation: isolate;
+    transform-origin: bottom center;
+    transition: transform 150ms ease;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      border: 0;
+      border-radius: inherit;
+      filter: saturate(.9);
+      box-shadow: none;
+    }
+
+    .project-image--chassis {
+      // Enlarge the collage so its top-left drawing fills the square crop.
+      width: 200%;
+      height: 200%;
+      object-position: left top;
+    }
+
+    .project-image--pixelated {
+      image-rendering: pixelated;
+    }
+  }
+
+  .project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: 18px;
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 150ms ease, visibility 150ms ease;
+
+    p {
+      margin: 0;
+      font-size: .78rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+  }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem .65rem;
+    font-size: .72rem;
+    line-height: 1.4;
+
+    a {
+      color: var(--accent);
+      // MDB's transition: all can delay inherited visibility and skip tab stops.
+      transition: color 150ms ease;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: .18em;
+    }
+  }
+
+  .project-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 2.7em;
+    margin: 12px 0 0;
+    font-size: .9rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -.01em;
+    color: var(--ink);
+  }
+
+  .project-tile:hover, .project-tile:focus-within {
+    z-index: 2;
+
+    .project-media {
+      transform: scale(1.08);
+    }
+
+    .project-overlay {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  .project-tile:focus-visible .project-media {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #projects {
+    --project-size: 160px;
+
+    .project-overlay {
+      padding: 14px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #projects .project-media, #projects .project-overlay {
+    transition: none;
+  }
+}
