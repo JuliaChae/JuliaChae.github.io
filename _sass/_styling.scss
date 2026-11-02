@@ -1,0 +1,171 @@
+// Stage 1: shared typography, quiet surfaces, and a restrained intro treatment.
+body {
+  font-family: "Avenir", "Avenir Next", "Lato", "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ink);
+  font-family: inherit;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+#about .post-title {
+  font-family: "Lato", "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h2, .custom_projects h2, .misc h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-top: 0 !important; // Override legacy inline section spacing.
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--accent-soft);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: lowercase;
+}
+
+.custom_projects, .misc {
+  line-height: 1.6;
+}
+
+body a, body table.table a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+
+  &:hover, &:focus-visible {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  strong, b, em, span {
+    color: inherit;
+  }
+}
+
+// Keep navigation undecorated and center the theme icon with the menu labels.
+#navbar {
+  a, a:hover, a:focus-visible {
+    text-decoration: none;
+  }
+
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    justify-content: flex-end;
+  }
+
+  #light-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+}
+
+// The body provides the positioning/stacking context; the layer scrolls away.
+body:has(#about) {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    max-height: 50rem;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 15% 0%, var(--wash), transparent 40%),
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
+    // Any opaque palette color provides the same alpha mask as black.
+    -webkit-mask-image: linear-gradient(180deg, var(--ink) 55%, transparent 100%);
+    mask-image: linear-gradient(180deg, var(--ink) 55%, transparent 100%);
+  }
+}
+
+// Section headings provide the only separators; content uses whitespace.
+.card, .card-header, .card-footer,
+.navbar, .navbar .dropdown-menu,
+.news, .news table, .news th, .news td,
+.publications, .projects, .custom_projects,
+.profile img, .z-depth-1 {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.card, .card-header, .card-footer {
+  background: transparent;
+}
+
+hr {
+  display: none;
+}
+
+#publications table, #projects table {
+  margin-bottom: 1.5rem;
+
+  td:first-child {
+    width: 180px !important; // Keep legacy inline percentages from stretching teasers.
+    padding-right: 20px;
+  }
+
+  td + td {
+    width: auto;
+  }
+}
+
+#publications img, #projects img,
+.publications img, .projects img {
+  width: 160px;
+  height: 110px;
+  max-width: 100%;
+  object-fit: cover;
+  border: 0;
+  border-radius: 6px;
+  filter: saturate(.9);
+  box-shadow: none !important;
+}
+
+@media (max-width: 575.98px) {
+  #publications table, #projects table {
+    td:first-child {
+      width: 112px !important;
+      padding-right: 12px !important;
+    }
+  }
+
+  #publications img, #projects img,
+  .publications img, .projects img {
+    width: 100px;
+    height: 68.75px;
+  }
+
+  .news .table .news-date {
+    width: auto;
+    padding-right: .75rem;
+  }
+}

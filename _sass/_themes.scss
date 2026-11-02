@@ -1,64 +1,56 @@
-/*******************************************************************************
- * Themes
- ******************************************************************************/
- 
 :root {
-  --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
-  --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0,0,0,.1);
-  --global-card-bg-color: #{$white-color};
+  --bg: #F7F7F0;
+  --ink: #252823;
+  --accent: #365447;
+  --accent-soft: rgba(54, 84, 71, .25);
+  --grid: rgba(54, 84, 71, .09);
+  --wash: rgba(54, 84, 71, .12);
 
-  .fa-sun {
-    display : none;
-  }
-  .fa-moon {
-    padding-left: 10px;
-    padding-top: 12px;
-    display : block;
-  }
-
-  .repo-img-light {
-    display: block;
-  }
-  .repo-img-dark {
-    display: none;
-  }
+  // Preserve al-folio's variable API using the shared palette.
+  --global-bg-color: var(--bg);
+  --global-code-bg-color: var(--wash);
+  --global-text-color: var(--ink);
+  --global-text-color-light: var(--ink);
+  --global-theme-color: var(--accent);
+  --global-hover-color: var(--accent);
+  --global-footer-bg-color: var(--bg);
+  --global-footer-text-color: var(--ink);
+  --global-footer-link-color: var(--accent);
+  --global-distill-app-color: var(--ink);
+  --global-divider-color: var(--accent-soft);
+  --global-card-bg-color: var(--bg);
+  color-scheme: light;
 }
 
-html[data-theme='dark'] {
-  --global-bg-color: #{$grey-color-dark};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color-light};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
+.repo-img-light {
+  display: block;
+}
+
+.repo-img-dark {
+  display: none;
+}
+
+.fa-sun {
+  display: none;
+}
+
+html[data-theme="dark"] {
+  --bg: #1D231F;
+  --ink: #E7EAE1;
+  --accent: #A9CBB5;
+  --accent-soft: rgba(169, 203, 181, .25);
+  --grid: rgba(169, 203, 181, .07);
+  --wash: rgba(169, 203, 181, .10);
+  color-scheme: dark;
 
   .fa-sun {
-    padding-left: 10px;
-    padding-top: 12px;
-    display : block;
-  }
-  .fa-moon {
-    display : none;
+    display: inline-block;
   }
 
-  .repo-img-light {
+  .fa-moon, .repo-img-light {
     display: none;
   }
+
   .repo-img-dark {
     display: block;
   }

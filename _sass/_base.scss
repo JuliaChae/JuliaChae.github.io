@@ -478,11 +478,11 @@ footer.sticky-bottom {
     .page-link {
       color: var(--global-text-color);
       &:hover {
-        color: $black-color;
+        color: var(--ink);
       }
     }
     &.active .page-link {
-      color: $white-color;
+      color: var(--bg);
       background-color: var(--global-theme-color);
       &:hover {
         background-color: var(--global-theme-color);
@@ -592,7 +592,7 @@ footer.sticky-bottom {
           padding-left: 1rem;
           padding-right: 1rem;
           a {
-            color: white;
+            color: var(--bg);
             &:hover {
               text-decoration: none;
             }
