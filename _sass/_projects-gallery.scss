@@ -31,7 +31,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    padding-bottom: 16px;
+    padding-bottom: 0;
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
@@ -67,7 +67,11 @@
   }
 
   .project-caption {
-    display: none;
+    // Hidden captions keep their natural height, avoiding hover jumps or extra space.
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 150ms ease;
     margin-top: .7rem;
     padding: 0 .6rem .65rem;
     color: var(--ink);
@@ -141,7 +145,9 @@
     }
 
     .project-caption {
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
   }
 
@@ -150,7 +156,11 @@
   &:has(.project-tile:hover) .project-tile:not(:hover),
   &:not(:has(.project-tile:hover)):has(.project-tile:focus-within) .project-tile:not(:focus-within) {
     .project-card { background: transparent; transition: none; }
-    .project-caption { display: none; }
+    .project-caption {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
     .project-title { text-decoration: none; }
   }
 
@@ -210,9 +220,16 @@
 
     > span { font-size: 1.5rem; }
   }
+
+}
+
+// Keep outside research close to the gallery's captions.
+#projects + #misc > h2 {
+  margin-top: .75rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
   #projects .project-gallery { scroll-behavior: auto; }
   #projects .project-card { transition: none; }
+  #projects .project-caption { transition: none; }
 }
