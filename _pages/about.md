@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.eecs.mit.edu/'>Massachusetts Institute of Technology</a>. Computer Vision and Machine Learning
 
 profile:
   align: right
@@ -22,11 +21,9 @@ misc: true
 # social: true  # includes social icons at the bottom of the page
 ---
 
-Hi! I’m a PhD student in EECS at [**MIT CSAIL**](https://www.csail.mit.edu/), advised by [**Sara Beery**](https://beerys.github.io/). My research is supported by the NSERC Postgraduate Scholarship and the MIT Generative AI Consortium Grant, and has previously been funded by the Google–MIT Grant and the MIT Viterbi Fellowship.
+**I study how large vision and multimodal models can become more fine-grained, specialized, and useful for real-world and scientific applications.**
 
-I work on **computer vision** and **multi-modal models**, and I’m interested in making large AI models more fine-grained, adaptive and human-aligned for specialized, real-world applications. I’m broadly interested in AI systems that support scientific discovery, including applications in ecology and biodiversity monitoring.
-
-I closely collaborate with research scientists from **Adobe Research** (primarily with [**Cusuh Ham**](https://cusuh.github.io) and [**Richard Zhang**](https://richzhang.github.io)) and have interned (x2) in the past. Before MIT, I got my BS in EngSci at the [University of Toronto](https://discover.engineering.utoronto.ca/programs/engineering-programs/engineering-science/), where I worked with [Sanja Fidler](https://www.cs.toronto.ca/~fidler/), [Florian Shkurti](http://www.cs.toronto.edu/~florian/), and [Steven Waslander](https://www.trailab.utias.utoronto.ca/stevenwaslander). At MIT, I help organize [MLTea](https://www.csail.mit.edu/taxonomy/term/417), a series of student-led seminars for the MIT ML community.
+I’m a PhD student in EECS at [**MIT CSAIL**](https://www.csail.mit.edu/), advised by [**Sara Beery**](https://beerys.github.io/). I collaborate closely with **Adobe Research**, primarily with [**Cusuh Ham**](https://cusuh.github.io) and [**Richard Zhang**](https://richzhang.github.io). Previously, I studied EngSci at the [University of Toronto](https://discover.engineering.utoronto.ca/programs/engineering-programs/engineering-science/), working with [Sanja Fidler](https://www.cs.toronto.ca/~fidler/), [Florian Shkurti](http://www.cs.toronto.edu/~florian/), and [Steven Waslander](https://www.trailab.utias.utoronto.ca/stevenwaslander). I co-organize [MLTea](https://www.csail.mit.edu/taxonomy/term/417) at MIT.
 
 <!-- Hi! I’m a EECS PhD student at [**MIT CSAIL**](https://www.csail.mit.edu/), advised by [**Sara Beery**](https://beerys.github.io/).  
 My PhD is supported by the **NSERC Postgraduate Scholarship** and the **MIT Generative AI Consortium Grant**, and was previously supported by the **Google–MIT Grant** and the **MIT Viterbi Fellowship**.
