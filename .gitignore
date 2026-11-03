@@ -9,3 +9,6 @@ _site
 Gemfile.lock
 vendor
 
+# Local agent working files
+.agent/
+
