@@ -6,6 +6,8 @@
   --accent-soft: rgba(54, 84, 71, .25);
   --grid: rgba(54, 84, 71, .09);
   --wash: rgba(54, 84, 71, .12);
+  --profile-frame: var(--bg);
+  --profile-outline: rgba(128, 128, 128, .55);
 
   // Preserve al-folio's variable API using the shared palette.
   --global-bg-color: var(--bg);
@@ -43,6 +45,7 @@ html[data-theme="dark"] {
   --accent-soft: rgba(169, 203, 181, .25);
   --grid: rgba(169, 203, 181, .0455);
   --wash: rgba(169, 203, 181, .10);
+  --profile-outline: rgba(160, 160, 160, .65);
   color-scheme: dark;
 
   .fa-sun {

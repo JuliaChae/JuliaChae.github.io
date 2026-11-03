@@ -5,9 +5,16 @@ layout: default
 <!-- about.html -->
       <div class="post" id = 'about'>
         <header class="post-header">
+          <div class="about-heading">
           <h1 class="post-title">
            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
           </h1>
+          {% if page.social %}
+          <nav class="contact-icons" aria-label="Contact and profiles">
+            {% include social.html %}
+          </nav>
+          {% endif %}
+          </div>
           <p class="desc">{{ page.subtitle }}</p>
         </header>
 
@@ -60,21 +67,17 @@ layout: default
 
           <!-- Social -->
           <div class="social">
-            <div class="contact-icons">
-            {% include social.html %}
-            </div>
+            <div class="custom_projects" id="publications">
+              {% if page.publications %}
+                {% include publications.html %}
+              {% endif %}
+              </div>
 
             {% if page.education %}
             <div class="custom_projects" id="education">
                 {% include education.html %}
             </div>
             {% endif %}
-
-            <div class="custom_projects" id="publications">
-              {% if page.publications %}
-                {% include publications.html %}
-              {% endif %}
-              </div>
 
           <div class="custom_projects" id="projects">
             {% if page.projects %}

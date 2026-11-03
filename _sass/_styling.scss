@@ -23,6 +23,44 @@ h1 {
 
 #about .post-title {
   font-family: "Lato", "Avenir", "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+}
+
+#about .about-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--accent-soft);
+  margin-bottom: 1.5rem;
+
+  .contact-icons {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    font-size: 1.4rem;
+    line-height: 1;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 32px;
+      min-height: 32px;
+      color: var(--ink);
+      text-decoration: none;
+
+      &:hover, &:focus-visible {
+        color: var(--accent);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#about .post-header .desc:empty {
+  display: none;
 }
 
 h2, .custom_projects h2, .misc h2 {
@@ -38,6 +76,7 @@ h2, .custom_projects h2, .misc h2 {
 }
 
 .custom_projects, .misc {
+  text-align: left;
   line-height: 1.6;
 }
 
@@ -81,14 +120,32 @@ body a, body table.table a {
   }
 }
 
-// The body provides the positioning/stacking context; the layer scrolls away.
+// Keep a subtle grid behind the viewport while the about-page content scrolls.
 body:has(#about) {
   position: relative;
   isolation: isolate;
   overflow-x: clip;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    height: 100svh;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 15% 0%, var(--wash), transparent 40%),
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 100% 100%, 30px 30px, 30px 30px;
+    // Any opaque palette color provides the same alpha mask as black.
+    -webkit-mask-image: linear-gradient(180deg, var(--ink) 55%, transparent 100%);
+    mask-image: linear-gradient(180deg, var(--ink) 55%, transparent 100%);
+  }
 }
 
-// Anchor the fade to the actual bio height so it ends before research interests.
+// Bio links use the same accent treatment without bold link text.
 #about > article > .clearfix {
   position: relative;
 
@@ -104,25 +161,6 @@ body:has(#about) {
     }
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -10rem;
-    bottom: 0;
-    left: 50%;
-    width: 100vw;
-    transform: translateX(-50%);
-    z-index: -1;
-    pointer-events: none;
-    background-image:
-      radial-gradient(circle at 15% 0%, var(--wash), transparent 40%),
-      linear-gradient(var(--grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-    background-size: 100% 100%, 30px 30px, 30px 30px;
-    // Any opaque palette color provides the same alpha mask as black.
-    -webkit-mask-image: linear-gradient(180deg, var(--ink) 25%, transparent 90%);
-    mask-image: linear-gradient(180deg, var(--ink) 25%, transparent 90%);
-  }
 }
 
 // Section headings provide the only separators; content uses whitespace.
@@ -140,19 +178,26 @@ body:has(#about) {
   margin: 0 0 1rem 2rem;
 
   figure {
+    box-sizing: border-box;
+    width: 220px;
+    height: 220px;
     margin: 0;
+    border: 12px solid var(--profile-frame);
+    border-radius: 32px;
+    background: var(--profile-frame);
+    box-shadow: 0 0 0 1px var(--profile-outline);
   }
 
   img:not(.rounded-circle) {
     display: block;
     box-sizing: border-box;
-    width: 220px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center 20%;
-    border-radius: 16px !important;
-    border: 4px solid var(--bg) !important;
-    box-shadow: 0 0 0 1px rgba(var(--accent-rgb), .35) !important;
+    border-radius: 20px !important;
+    border: 1px solid var(--profile-outline) !important;
+    box-shadow: none !important;
     filter: saturate(.95) sepia(.08);
   }
 }
@@ -190,15 +235,102 @@ hr {
   box-shadow: none !important;
 }
 
+#publications .theses {
+  font-size: .87rem;
+  line-height: 1.5;
+
+  .thesis-entry + .thesis-entry {
+    margin-top: 1rem;
+  }
+
+  p {
+    margin: .25rem 0 0;
+    font-size: inherit;
+  }
+}
+
+.news .news-scrollable {
+  max-height: 9rem;
+  overflow-y: auto;
+}
+
+.news .table {
+  font-family: inherit;
+  font-size: .92rem;
+  line-height: 1.6;
+
+  th, td {
+    font: inherit;
+  }
+}
+
+#education {
+  .education-entry {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .education-entry + .education-entry {
+    margin-top: 1.25rem;
+  }
+
+  h3 {
+    margin: 0 0 .25rem;
+    font-size: .92rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 0;
+    font-size: .87rem;
+    line-height: 1.5;
+  }
+
+  img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
 @media (max-width: 575.98px) {
+  #education {
+    .education-entry {
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: .75rem;
+    }
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  #about .about-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+
   #about .profile {
     float: none !important;
     width: 160px;
     margin: 0 auto 2rem;
 
-    img:not(.rounded-circle) {
+    figure {
       width: 160px;
       height: 160px;
+      border-width: 10px;
+      border-radius: 26px;
+    }
+
+    img:not(.rounded-circle) {
+      border-radius: 16px !important;
     }
   }
 
