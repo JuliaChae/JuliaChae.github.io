@@ -6,7 +6,8 @@ published: true
 gallery: true
 img: "assets/img/carla_imi.gif"
 description: "Unsupervised pretraining for imitation learning."
-gallery_order: 3
+gallery_order: 5
+full_description: "Investigated how unsupervised representation learning could be utilized in an imitation learning (IL) task such as robot path following. In this project, we successfully trained a multimodal representation from unlabelled path traversal data, fine-tuned on minimal labeled data."
 ---
 
 <!-- Original project description retained from the homepage. -->

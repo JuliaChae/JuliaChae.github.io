@@ -6,17 +6,19 @@ published: true
 gallery: true
 img: "assets/img/ESC301.jpg"
 description: "A robot that autonomously assists with EV charging."
-gallery_order: 2
-thumbnail_focus: "chassis"
+gallery_order: 3
 resources:
   - label: "Report"
     url: "/assets/pdf/ESC301_Project Proposal Report.pdf"
+    available: false
+    unavailable_reason: "File missing from repository (2026-11-02)"
+full_description: "Designed, conceptualized and prototyped an autonomous robot which locates and traverses to a charging port on a car to plug in the charger, utilizing time-of-flight sensor, color sensor, and pi-camera. Developed a modular program in Python and C++, each responsible for sensor or chassis control; utilized embedded programing"
 ---
 
 <!-- Original project description retained from the homepage. -->
 <div class="project-description">
 <strong>Autonomous Electric Car Charger Robot </strong>
       <br>[Final Project], University of Toronto, ESC301 Praxis III. With Daniel R. and Chan Y.
-      <br> <a href="/assets/pdf/ESC301_Project Proposal Report.pdf">Detailed Design Report</a>
+      <br> <!-- Unavailable resource, original link retained: <a href="/assets/pdf/ESC301_Project Proposal Report.pdf">Detailed Design Report</a> -->
       <br> <br> Designed, conceptualized and prototyped an autonomous robot which locates and traverses to a charging port on a car to plug in the charger, utilizing time-of-flight sensor, color sensor, and pi-camera. Developed a modular program in Python and C++, each responsible for sensor or chassis control; utilized embedded programing
 </div>

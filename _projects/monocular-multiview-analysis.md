@@ -8,6 +8,7 @@ img: "assets/img/multiview.JPG"
 resources:
   - label: "Code"
     url: "https://github.com/JuliaChae/M3D-RPN-Waymo"
+    available: true
 ---
 
 <!-- Original project description retained from the homepage. -->

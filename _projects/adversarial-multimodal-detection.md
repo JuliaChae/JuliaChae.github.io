@@ -8,6 +8,7 @@ img: "assets/img/pointfusion.png"
 resources:
   - label: "Code"
     url: "https://github.com/JuliaChae/Pointfusion"
+    available: true
 ---
 
 <!-- Original project description retained from the homepage. -->

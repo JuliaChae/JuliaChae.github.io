@@ -1,0 +1,4 @@
+<div class="visual-tile__media">
+  <img class="visual-tile__image{% if include.pixelated %} visual-tile__image--pixelated{% endif %}{% if include.image contains 'ESC301.jpg' %} visual-tile__image--chassis{% endif %}" src="{{ include.image | relative_url }}" alt="{{ include.alt | escape }}" width="200" height="200" loading="lazy" decoding="async">
+</div>
+<p class="visual-tile__title{% if include.title_class %} {{ include.title_class }}{% endif %}"{% if include.title_id %} id="{{ include.title_id }}"{% endif %}>{{ include.title | escape }}</p>

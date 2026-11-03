@@ -1,6 +1,7 @@
 :root {
   --bg: #F7F7F0;
   --ink: #252823;
+  --ink-soft: color-mix(in srgb, var(--ink) 75%, var(--bg));
   --accent: #365447;
   --accent-rgb: 54, 84, 71;
   --accent-soft: rgba(54, 84, 71, .25);

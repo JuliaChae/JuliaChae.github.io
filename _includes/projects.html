@@ -1,24 +1,35 @@
-<h2><b>projects</b></h2>
+<h2><b>some fun projects!</b></h2>
 {%- assign gallery_projects = site.projects | where: "gallery", true | where: "published", true | sort: "gallery_order" -%}
+<form class="project-gallery-controls" aria-label="Project gallery details">
 <div class="project-gallery-shell">
   <div class="project-gallery" role="region" aria-label="Project gallery">
+    <span class="project-gallery-start" id="project-gallery-start" aria-hidden="true"></span>
     {% for project in gallery_projects %}
-    <article class="project-tile" tabindex="0" aria-labelledby="project-title-{{ project.gallery_order }}">
-      <div class="project-media">
-        <img class="project-image{% if project.thumbnail_focus == 'chassis' %} project-image--chassis{% endif %}{% if project.pixelated %} project-image--pixelated{% endif %}" src="{{ project.img | relative_url }}" alt="{{ project.original_title | escape }}" width="200" height="200" loading="lazy" decoding="async">
-        <div class="project-overlay">
-          <p>{{ project.description | escape }}</p>
-          {% if project.resources.size > 0 %}
-          <nav class="project-links" aria-label="{{ project.title | escape }} resources">
-            {% for resource in project.resources %}
-            <a href="{% if resource.url contains '://' %}{{ resource.url | escape }}{% else %}{{ resource.url | relative_url | escape }}{% endif %}">{{ resource.label | escape }}</a>
-            {% endfor %}
-          </nav>
-          {% endif %}
+    <article class="visual-tile project-tile" id="project-tile-{{ project.gallery_order }}" tabindex="0" aria-labelledby="project-title-{{ project.gallery_order }}">
+      <div class="project-card">
+        <input class="project-more-toggle" type="radio" name="project-details" id="project-more-{{ project.gallery_order }}" aria-label="Show full description for {{ project.title | escape }}" aria-controls="project-full-{{ project.gallery_order }}">
+        {% capture tile_title_id %}project-title-{{ project.gallery_order }}{% endcapture %}
+        {% include visual_tile.html image=project.img alt=project.original_title title=project.title title_id=tile_title_id title_class="project-title" pixelated=project.pixelated %}
+        <div class="project-caption">
+          <p class="project-blurb">{{ project.description | escape }}</p>
+          <label class="project-more-button project-show-more" for="project-more-{{ project.gallery_order }}">More <span aria-hidden="true">+</span></label>
+          <button class="project-more-button project-show-less" type="reset">Less <span aria-hidden="true">−</span></button>
+          <div class="project-full" id="project-full-{{ project.gallery_order }}">
+            <p>{{ project.full_description | escape }}</p>
+            {% assign verified_resources = project.resources | where: "available", true %}
+            {% if verified_resources.size > 0 %}
+            <nav class="project-links" aria-label="{{ project.title | escape }} resources">
+              {% for resource in verified_resources %}
+              <a href="{% if resource.url contains '://' %}{{ resource.url | escape }}{% else %}{{ resource.url | relative_url | escape }}{% endif %}">{{ resource.label | escape }}</a>
+              {% endfor %}
+            </nav>
+            {% endif %}
+          </div>
         </div>
       </div>
-      <h3 class="project-title" id="project-title-{{ project.gallery_order }}">{{ project.title | escape }}</h3>
     </article>
     {% endfor %}
+    <a class="project-gallery-return" href="#project-gallery-start"><span aria-hidden="true">↶</span> Back to start</a>
   </div>
 </div>
+</form>

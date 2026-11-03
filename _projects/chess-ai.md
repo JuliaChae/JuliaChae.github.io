@@ -8,6 +8,7 @@ img: "assets/img/Chess.png"
 resources:
   - label: "Code"
     url: "https://github.com/JuliaChae/Chess-AI"
+    available: true
 ---
 
 <!-- Original project description retained from the homepage. -->
