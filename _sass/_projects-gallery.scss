@@ -2,6 +2,12 @@
 #projects {
   --project-panel-bg: color-mix(in srgb, var(--bg) 94%, var(--accent));
 
+  .project-intro {
+    margin: 0 0 1rem;
+    color: var(--ink-soft);
+    font-size: .85rem;
+  }
+
   .project-gallery-shell {
     position: relative;
   }
